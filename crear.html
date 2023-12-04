@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOB</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style> -->
+</head>
+<body>
+    <section class="register-section">
+        <div class="container">
+            <h2 class="sectiontitle">Crear hoja de vida</h2>
+            <form action="#" class="register-form" id="registerForm">
+                <!-- Agrega campos adicionales según sea necesario -->
+                <div class="form-group">
+                    <label for="datos_personales">Datos Personales</label>
+                    <label for="nombre_completo">Nombre completo:</label>
+                    <input type="text" id="nombre_completo" name="nombre_completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="carnet">Carnet de Identidad:</label>
+                    <input type="number" id="carnet" name="carnet" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" required>
+                </div>
+                <div class="form-group">
+                    <label for="Fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="Fecha_nacimiento" name="Fecha_nacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cel">Celular:</label>
+                    <input type="tel" id="cel" name="cel" required>
+                </div>
+                <div class="form-group">
+                    <label for="telf">Telefono fijo:</label>
+                    <input type="tel" id="telf" name="telf" required>
+                </div>
+                <div class="form-group">
+                    <label for="direc">Direccion:</label>
+                    <input type="text" id="direc" name="direc" required>
+                </div>
+                <div class="form-group">
+                    <label for="Estado_civil">Estado civil:</label>
+                    <input type="text" id="Estado_civil" name="Estado_civil" required>
+                </div>
+                <div class="form-group">
+                    <label for="lugar_nacimiento">Lugar de nacimiento:</label>
+                    <input type="text" id="lugar_nacimiento" name="lugar_nacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="lugar_residencia">Lugar de residencia:</label>
+                    <input type="text" id="lugar_residencia" name="lugar_residencia" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="perf_pro">Perfil Profesional:</label>
+                    <input type="message" id="perf_pro" name="perf_pro" required>
+                </div>
+                <div class="form-group">
+                    <label for="exp_lab">Experencia Laboral:</label>
+                    <input type="message" id="exp_lab" name="exp_lab" required>
+                </div>        
+                <div class="form-group">
+                    <label for="edu">Educacion:</label>
+                    <label for="ins_edu">Institucion educativa:</label>
+                    <input type="message" id="ins_edu" name="ins_edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="tit">Titulo:</label>
+                    <input type="text" id="tit" name="tit" required>
+                </div>    
+                <div class="form-group">
+                    <label for="grad_ob">Grado Obtenido:</label>
+                    <input type="text" id="grad_ob" name="grad_ob" required>
+                </div>    
+                <div class="form-group">
+                    <label for="ciu">Ciudad:</label>
+                    <input type="text" id="ciu" name="ciu" required>
+                </div>   
+                <div class="form-group">
+                    <label for="fec">Fecha:</label>
+                    <input type="date" id="fec" name="fec" required>
+                </div>    
+                <div class="form-group">
+                    <label for="habocom">Habilidades o competencias:</label>
+                    <input type="message" id="habocom" name="habocom" required>
+                </div> 
+                <div class="form-group">
+                    <label for="habinf">Habilidades Informaticas:</label>
+                    <input type="message" id="habinf" name="habinf" required>
+                </div> 
+                <div class="form-group">
+                    <label for="idio">Idiomas:</label>
+                    <input type="message" id="idio" name="idio" required>
+                </div> 
+                
+                <button type="submit" class="button">Registrar el Curriculum Vitae</button>
+            </form>
+            <div class="after-registration-options hide" id="afterRegistrationOptions">
+                <p>¡Registro exitoso!</p>
+                <p>¿Qué deseas hacer a continuación?</p>
+                <button class="button" onclick="showCurriculumForm()">Generar Curriculum</button>
+                <button class="button" onclick="showUploadForm()">Subir Curriculum</button>
+            </div>
+            <div class="curriculum-form hide" id="curriculumForm">
+                <h2 class="sectiontitle">Crear Hoja de Vida</h2>
+                <form action="#" class="cv-form">
+                    <div class="form-group">
+                        <label for="full-name">Nombre completo:</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Educación:</label>
+                        <input type="text" id="education" name="education" required>
+                    </div>
+                    <!-- Agrega más campos según sea necesario -->
+                    <button type="submit" class="button">Guardar Curriculum</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
